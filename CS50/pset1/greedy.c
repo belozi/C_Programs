@@ -10,30 +10,30 @@ int main(void)
             {
               printf("How much change is owed?\n");
               change = GetFloat(); 
-              
+              change *= 100; 
             }
         
         int quarters = 0,dimes = 0, nickles = 0, pennies = 0;
         while(change > 0)
             {
-                if(change >= .25)
+                if(change >= 25)
                     {
-                        change -= .25;
+                        change -= 25;
                         quarters++;
                     }
-                else if(change >= .10)
+                else if(change >= 10)
                     {
-                        change -= .10;
+                        change -= 10;
                         dimes++;
                     }
-                else if(change >= .05)
+                else if(change >= 05)
                     {
-                        change -= .05;
+                        change -= 05;
                         nickles++;
                     }
-                else if(change >= .01)
+                else if(change >= 01)
                     {
-                        change -= .01;
+                        change -= 01;
                         pennies++;
                     }
                 else
@@ -45,4 +45,4 @@ int main(void)
          printf("Dimes:    %d \n", dimes);
          printf("Nickles:  %d \n", nickles);
          printf("Pennies:  %d \n", pennies);
-    }
+    }					
